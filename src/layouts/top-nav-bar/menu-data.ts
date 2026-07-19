@@ -15,10 +15,10 @@ export const menuData: T_menu[] = [
         name: "Home",
         path: "/",
     },
-    {
-        name: "About us",
-        path: "/about-us",
-    },
+    // {
+    //     name: "About us",
+    //     path: "/about-us",
+    // },
     {
         name: "Service",
         path: "/service",
@@ -39,3 +39,4 @@ export const menuData: T_menu[] = [
     //   ],
     // },
 ];
+

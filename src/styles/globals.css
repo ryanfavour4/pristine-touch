@@ -226,7 +226,7 @@
 
 .bg-cta-section {
     background:
-        linear-gradient(rgb(var(--primary), 0.9), rgb(var(--primary), 0.9)),
+        linear-gradient(rgb(var(--accent), 0.9), rgb(var(--accent), 0.9)),
         url("/public/images/cta-image.png");
     background-size: cover;
 }
@@ -234,7 +234,7 @@
 .bg-book-now-cta-section {
     background:
         url("/public/images/logo-opacity-10.png"),
-        linear-gradient(rgb(46, 46, 46, 1), rgb(46, 46, 46, 1));
+        linear-gradient(rgb(0, 23, 56, 1), rgb(0, 23, 56, 1));
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;

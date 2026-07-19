@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Input from "@/components/input";
 import Select from "@/components/select";
+import { useForm, ValidationError } from "@formspree/react";
+import { enqueueSnackbar } from "notistack";
 
 const ContactForm = () => {
+    const [state, handleSubmit] = useForm("xbdnyrdj");
+
     const [name, setName] = useState({ value: "" });
     const [email, setEmail] = useState({ value: "" });
     const [phone, setPhone] = useState({ value: "" });
@@ -22,38 +24,46 @@ const ContactForm = () => {
         setMessage({ value: "" });
     };
 
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        try {
-            // In a real app, you would send this to your backend
-            // For demo purposes, we'll simulate an API call
-            await new Promise((resolve) => setTimeout(resolve, 1500));
-
-            // enqueueSnackbar(
-            //     "Message sent successfully! We'll get back to you soon.",
-            //     {
-            //         variant: "success",
-            //     },
-            // );
-
+    useEffect(() => {
+        if (state.succeeded) {
             // Reset form
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             handleClearForm();
-        } catch (error: any) {
-            // enqueueSnackbar("Failed to send message. Please try again.", {
-            //     variant: "error",
-            // });
-        } finally {
+            enqueueSnackbar(
+                "Message sent successfully! We'll get back to you soon.",
+                {
+                    variant: "success",
+                },
+            );
+        }
+        if (state.errors) {
+            if (state.errors.getAllFieldErrors().length > 0) {
+                enqueueSnackbar("Failed to send message. Please try again.", {
+                    variant: "error",
+                });
+            }
+        }
+    }, [state.succeeded, state.errors, state]);
+
+    useEffect(() => {
+        if (state.submitting) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setIsSubmitting(true);
+        } else {
             setIsSubmitting(false);
         }
-    };
+    }, [state.submitting]);
 
     return (
         <form
             onSubmit={handleSubmit}
             className="shadow space-y-6 bg-light max-w-3xl px-6 py-14 md:py-16 md:px-24 rounded-2xl mx-auto"
         >
+            <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+            />
             <div className="flex flex-col md:grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div className="text-sm flex flex-col gap-1.5">
                     <label htmlFor="name">Full Name</label>
@@ -156,3 +166,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+

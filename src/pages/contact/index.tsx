@@ -25,7 +25,7 @@ const contactMethods = [
         title: "Instagram",
         details: "Tap to send us message via Instagram",
         description: "Office 1",
-        url: "https://www.instagram.com/cleanqnect_za",
+        url: "https://www.instagram.com/pristine-touch",
     },
     {
         icon: "mdi:whatsapp",

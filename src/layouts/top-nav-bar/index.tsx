@@ -61,7 +61,7 @@ export default function Navbar({ className }: { className?: string }) {
                 >
                     <div className="flex items-center justify-between px-2 pt-2">
                         <Link to="/" className="px-4">
-                            <Logo variant="default" className="w-16" />
+                            <Logo variant="alt-icon" className="w-16" />
                         </Link>
 
                         <button
@@ -142,3 +142,4 @@ export default function Navbar({ className }: { className?: string }) {
         </>
     );
 }
+

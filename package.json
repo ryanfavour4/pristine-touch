@@ -14,6 +14,7 @@
     "@iconify/react": "^6.0.2",
     "@tailwindcss/vite": "^4.1.18",
     "motion": "^12.26.2",
+    "notistack": "^3.0.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-fast-marquee": "^1.6.5",

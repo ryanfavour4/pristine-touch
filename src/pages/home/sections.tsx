@@ -34,7 +34,7 @@ export function GooglePlayStoreButton() {
 export function CtaSection() {
     return (
         <section className="bg-light py-16 md:pb-32 px-2">
-            <div className="container max-w-5xl rounded-4xl flex flex-col gap-4 items-center px-2.5 py-20 bg-primary text-light bg-cta-section">
+            <div className="container max-w-5xl rounded-4xl flex flex-col gap-4 items-center px-2.5 py-20 bg-light text-light bg-cta-section">
                 <h4 className="max-w-2xl mx-auto md:text-5xl text-4xl font-semibold text-center">
                     Ready for Sparkling Clean Home?
                 </h4>

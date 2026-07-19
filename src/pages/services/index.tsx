@@ -7,20 +7,62 @@ import { Link } from "react-router";
 const safeFeatures = [
     {
         icon: "eos-icons:cleanup",
-        name: "Room Cleaning",
-        desc: "Perfect for targetting specific areas. Our room cleaning services covers dusting, vacumming, mopping, and surface cleaning for individual rooms.",
+        name: "Industrial Cleaning",
+        desc: "Specialized cleaning for factories, warehouses, and commercial facilities. We handle heavy-duty equipment cleaning, floor degreasing, and industrial debris removal to maintain a safe working environment.",
         bottomText: "From: NGN 10,000.00",
     },
     {
         icon: "eos-icons:cleanup",
-        name: "Bathroom Deep Clean",
-        desc: "Our most thourough bathroom service. We sanitize every surface, remove limescale, and leave your bathroom sparking and germ-free.",
+        name: "Deep Cleaning",
+        desc: "Intensive cleaning that reaches every corner of your space. We clean behind furniture, sanitize hard-to-reach areas, and eliminate deep-seated dirt and allergens for a thoroughly refreshed environment.",
         bottomText: "From: NGN 10,000.00",
     },
     {
         icon: "eos-icons:cleanup",
-        name: "Full House Clean",
-        desc: "Complete top-to-buttom cleaning for your entire home.",
+        name: "Post-construction Cleaning",
+        desc: "Comprehensive cleanup after construction or renovation work. We remove dust, debris, and construction residue while ensuring your space is safe and ready for occupancy.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Routine Cleaning",
+        desc: "Regular maintenance cleaning to keep your home fresh and tidy. Includes dusting, vacuuming, mopping, and general tidying to maintain a clean, healthy living space.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Office Cleaning",
+        desc: "Professional cleaning tailored for office environments. We sanitize workstations, meeting rooms, restrooms, and common areas to create a productive and hygienic workplace.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Move in & Out Cleaning",
+        desc: "Thorough cleaning for properties during transitions. Perfect for preparing a new home for move-in or leaving a property spotless when moving out.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Halls & Event Cleaning",
+        desc: "Pre and post-event cleaning services for halls, venues, and event spaces. We ensure your venue is immaculate before guests arrive and spotless after the celebration ends.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Tank Wash",
+        desc: "Professional cleaning and maintenance of water tanks and cisterns. We ensure thorough disinfection and removal of sediment to guarantee safe, clean water supply.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Window Cleaning",
+        desc: "Expert window and glass cleaning for residential and commercial properties. We clean interior and exterior windows, leaving them streak-free and crystal clear.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "eos-icons:cleanup",
+        name: "Rug Wash",
+        desc: "Professional rug and carpet cleaning that removes deep-set dirt, stains, and allergens. Our specialized equipment restores the beauty and extends the life of your rugs.",
         bottomText: "From: NGN 10,000.00",
     },
 ];
@@ -28,20 +70,32 @@ const safeFeatures = [
 const propertyFeatures = [
     {
         icon: "solar:buildings-bold-duotone",
-        name: "Room Cleaning",
-        desc: "Perfect for targetting specific areas. Our room cleaning services covers dusting, vacumming, mopping, and surface cleaning for individual rooms.",
+        name: "Residential Property Management",
+        desc: "Ongoing care for homes, including maintenance checks, cleaning support, and coordination of repairs.",
         bottomText: "From: NGN 10,000.00",
     },
     {
         icon: "solar:buildings-bold-duotone",
-        name: "Bathroom Deep Clean",
-        desc: "Our most thourough bathroom service. We sanitize every surface, remove limescale, and leave your bathroom sparking and germ-free.",
+        name: "Commercial Property Management",
+        desc: "Professional maintenance for offices and retail spaces, with cleaning, waste handling, and common area upkeep.",
         bottomText: "From: NGN 10,000.00",
     },
     {
         icon: "solar:buildings-bold-duotone",
-        name: "Full House Clean",
-        desc: "Complete top-to-buttom cleaning for your entire home.",
+        name: "Industrial Property Management",
+        desc: "Scheduled facility care for warehouses and factories, with cleaning, inspections, and infrastructure support.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "solar:buildings-bold-duotone",
+        name: "Project Supervision",
+        desc: "On-site oversight of maintenance and renovation works to ensure quality, timeliness, and safety.",
+        bottomText: "From: NGN 10,000.00",
+    },
+    {
+        icon: "solar:buildings-bold-duotone",
+        name: "Project Management",
+        desc: "Full project coordination from planning through completion, keeping budgets and schedules on track.",
         bottomText: "From: NGN 10,000.00",
     },
 ];
