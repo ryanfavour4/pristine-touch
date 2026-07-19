@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-dark: rgba(var(--dark));
+    --color-grey: rgba(var(--grey));
+    --color-dark-grey: rgba(var(--dark-grey));
+    --color-light: rgba(var(--light));
+    --color-light-fade: rgba(var(--light-fade));
+    --color-primary: rgba(var(--primary));
+    --color-secondary: rgba(var(--secondary));
+    --color-accent: rgba(var(--accent));
+    --color-tertiary: rgba(var(--tertiary));
+    --color-tertiary-accent: rgba(var(--tertiary-accent));
+}
+
+@layer base {
+    :root {
+        --dark: 28, 28, 29; /* #1c1c1d */
+        --grey: 71, 84, 103; /* #475467 */
+        --dark-grey: 1, 27, 64; /* #011b40 */
+        --light: 255, 255, 255; /* #ffffff */
+        --light-fade: 248, 248, 248; /* #F8F8F8 */
+        --primary: 1, 136, 218; /* #0188da */
+        --secondary: 229, 239, 255; /* #E5EFFF */
+        --accent: 17, 29, 21; /* #111D15 */
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* transition: all 0.1s ease; */
+        scroll-behavior: smooth;
+    }
+
+    *::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        scrollbar-width: "thin";
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--light);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background: rgba(var(--primary), 0.4);
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        background: rgba(var(--primary), 0.9);
+        border-radius: 1rem;
+    }
+
+    html {
+        overflow-y: auto;
+        /* min-height: 100vh; */
+        scroll-behavior: smooth;
+        background: rgba(var(--light));
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: rgba(var(--dark));
+    }
+
+    #root {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-family: "Inter Tight", sans-serif;
+        width: 100%;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-size: 15px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .header-font {
+        font-family: "Inter Tight", sans-serif;
+    }
+
+    p,
+    .body-font {
+        font-family: "Inter Tight", sans-serif;
+    }
+
+    button:disabled {
+        cursor: not-allowed !important;
+        opacity: 0.6 !important;
+    }
+
+    /* Remove Chrome's default autofill background color */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+        -webkit-text-fill-color: rgba(var(--text)) !important;
+        transition: background-color 5000s ease-in-out 0s;
+        background-color: transparent !important;
+    }
+
+    .wrapper,
+    .container {
+        width: 98%;
+        max-width: 1250px;
+        margin: auto;
+        height: 100%;
+    }
+
+    .bg-about-service-pattern {
+        background-image:
+            linear-gradient(rgba(var(--light), 0.1), rgb(var(--light), 0.1)),
+            url("/public/images/about-service-bg-pattern.png");
+    }
+
+    /* Closed state */
+    .clip-path-close {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    /* Open / slide down state */
+    .clip-path-slide-top-down {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        height: fit-content;
+    }
+
+    .swiper-slide {
+        height: fit-content;
+    }
+
+    [title="Open this area in Google Maps (opens a new window)"] {
+        overflow: hidden !important;
+        display: none !important;
+    }
+
+    .gm-style {
+        will-change: transform;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        height: fit-content;
+    }
+
+    .swiper-slide {
+        height: fit-content;
+    }
+
+    @media only screen and (max-width: 650px) {
+        body {
+            font-size: 14px;
+        }
+
+        .sub-header::before {
+            left: -25%;
+            width: 30px;
+        }
+    }
+}
+
+/* ===========================|| COMPONENTS STYLES ||=========================== */
+@layer components {
+    .btn {
+        @apply flex w-full items-center shadow cursor-pointer justify-center rounded-lg border border-transparent ring-transparent px-8 py-3 font-medium transition-all hover:ring-1 focus:outline-2 focus:outline-offset-2 active:ring-2;
+    }
+
+    .btn-ghost {
+        @apply flex w-full items-center shadow-sm cursor-pointer justify-center rounded-lg border border-primary bg-transparent px-8 py-3 font-medium text-primary/75 ring-primary/10 transition-all hover:ring-1 focus:outline-2 focus:outline-offset-2 active:ring-2;
+    }
+
+    .btn-primary {
+        @apply flex w-full items-center shadow cursor-pointer justify-center rounded-lg border border-primary bg-primary px-8 py-3 font-medium text-light ring-primary/25 transition-all  hover:ring-1 focus:outline-2 focus:outline-offset-2  active:ring-2;
+    }
+
+    .btn-secondary {
+        @apply flex w-full items-center shadow cursor-pointer text-sm justify-center rounded-md border border-secondary bg-secondary px-8 py-3 font-medium text-light ring-secondary/25 transition-all hover:ring-1 focus:outline-2 focus:outline-offset-2 active:ring-2;
+    }
+
+    .input-field {
+        @apply block w-full rounded-md border bg-light px-3 py-2.5 text-base text-dark/75 -outline-offset-1 outline-primary ring-primary/25 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:ring-2 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-500 disabled:ring-0 sm:text-sm/6 md:text-sm;
+    }
+
+    .ellipsis {
+        @apply line-clamp-1 max-h-20 overflow-hidden text-ellipsis whitespace-break-spaces leading-relaxed [-webkit-box-orient:vertical] [display:-webkit-box];
+    }
+
+    .ellipsis-2 {
+        @apply line-clamp-2 max-h-20 overflow-hidden text-ellipsis whitespace-break-spaces leading-relaxed [-webkit-box-orient:vertical] [display:-webkit-box];
+    }
+
+    .ellipsis-3 {
+        @apply line-clamp-3 max-h-20 overflow-hidden text-ellipsis whitespace-break-spaces leading-relaxed [-webkit-box-orient:vertical] [display:-webkit-box];
+    }
+}
+
+.bg-hero-image {
+    background:
+        linear-gradient(rgba(0, 23, 56, 0.4), rgba(18, 26, 34, 0.8)),
+        url("/public/images/hero-image.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.bg-wavy-smooth-lines-pattern {
+    background:
+        linear-gradient(rgb(var(--accent), 0.9), rgb(var(--accent), 0.9)),
+        url("/public/images/wavy-smooth-lines-pattern.png");
+    background-size: contain;
+}
+
+.bg-cta-section {
+    background:
+        linear-gradient(rgb(var(--primary), 0.9), rgb(var(--primary), 0.9)),
+        url("/public/images/cta-image.png");
+    background-size: cover;
+}
+
+.bg-book-now-cta-section {
+    background:
+        url("/public/images/logo-opacity-10.png"),
+        linear-gradient(rgb(46, 46, 46, 1), rgb(46, 46, 46, 1));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
